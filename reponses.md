@@ -18,6 +18,9 @@ On peut utiliser comme valeur de map une liste : `HashMap<String, List<String>>`
 **Quel type de test réalise-t-on dans ce cas ?**
 Dans ce cas on fait des tests d'integration 
 
+**Quel sera le type du mock object et pour quelles raisons ?**
+Mock statique : parce qu'on va simuler des classes Java écrites et/ou générée
+
 **Discuter des avantages et des inconvénients de la technique du TDD par rapport à vos techniques de
 développement usuelles.**
 En développement, les tests visent à vérifier que le produit codé fonctionne comme prévu selon des scénarios 
