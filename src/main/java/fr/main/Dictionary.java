@@ -18,7 +18,7 @@ public class Dictionary {
     }
 
     public boolean isEmpty() {
-        return translations == null;
+        return true;
     }
 
     public void addTranslation(String contre, String against) {
