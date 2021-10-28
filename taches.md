@@ -1,2 +1,26 @@
-- Tâche concernant "getName()".
-- Dictionnaire vide "isEmpty()" n’est pas implémentée de manière correcte.
+- Créer la classe DictionaryTest
+-  Tâche concernant "getName()" : vérifier que le nom est stocké correctement dans l'objet
+-  Test echou (red bar atteinte)
+-  Créer une classe Dictionary vide, puis lui ajouter un constructeur vide.
+-  Écrire une méthode vide getName() renvoyant la chaîne de caractères "Example" .
+-  Green Bar
+-  Refactoring en supprimant la duplication 
+- Dictionnaire vide "isEmpty()" crée mais n’est pas implémentée de manière correcte.
+- Test permettant de vérifier que l’ajout d’une traduction au dictionnaire ( addTranslation ) se passe correctement lors de la vérification ( getTranslation ).
+- Red 
+- Utiliser Fake it, green bar
+- Ajouter dans le test la vérification d’une seconde traduction qui soit différente de la première.
+- Refactoring : Rendre le code de addTranslation et de getTranslation correct
+- Refactoring isEmpty
+- Ajouter un test permettant de vérifier le fonctionnement d’une traduction ayant deux sens possibles.
+- Red
+- Proposer une implémentation simple, rapide et qui passe les tests existants afin d’atteindre la green bar
+- refactoring
+- Traduction inverse : Écrire un test afin de vérifier le fonctionnement de telles traductions
+- Red
+- implémentation qui passe les tests existants afin d’atteindre la green bar
+- Chargement de fichier 
+- Les test suites de JUnit 
+- Créer une nouvelle classe DictionaryParserTest comme classe de tests JUnit, et la rajouter à AllTests .
+- Mettre en place votre mock object (cf la doocumentation de Mockito)
+- Conclusion
