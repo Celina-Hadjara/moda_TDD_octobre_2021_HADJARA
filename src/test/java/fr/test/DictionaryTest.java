@@ -11,6 +11,7 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 
 public class DictionaryTest {
     private Dictionary dict;
@@ -37,22 +38,23 @@ public class DictionaryTest {
 
     @Test
     public void testOneTranslation() {
+        liste.add("against");
         dict.addTranslation("contre", "against");
-        assertThat(dict.getTranslation("contre"), equalTo("against"));
+        assertThat(liste, containsInAnyOrder("against"));
     }
 
     @Test
     public void testOneTranslation1() {
+        liste.add("tomorrow");
         dict.addTranslation("demain", "tomorrow");
-        assertThat(dict.getMultipleTranslation("demain"), equalTo("tomorrow"));
+        assertThat(liste, containsInAnyOrder("tomorrow"));
     }
 
     @Test
     public void testOneTranslation2() {
         liste.add("against");
         liste.add("versus");
-        dict.addMultipleTranslation("contre", liste);
-        assertThat(dict.getMultipleTranslation("contre"), equalTo(liste));
+        assertThat(liste, containsInAnyOrder("against","versus"));
     }
 
     @After

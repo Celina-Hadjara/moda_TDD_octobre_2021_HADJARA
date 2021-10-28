@@ -1,18 +1,16 @@
 package fr.main;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Dictionary {
     private final String name;
-    private final Map<String, String> translations;
-    private HashMap<String, List<String>> translationsMultiple;
+    private HashMap<String, List<String>> translations;
 
     public Dictionary(String example) {
         this.name = "Example";
         this.translations = new HashMap<>();
-        this.translationsMultiple = new HashMap<>();
     }
 
     public String getName() {
@@ -23,35 +21,20 @@ public class Dictionary {
         return this.translations.isEmpty();
     }
 
-    public void addTranslation(String contre, String against) {
-        if (translations.containsKey(contre)){
-           System.err.println("Le mot existe déjà.");
+    public void addTranslation(String contre, String against){
+        if (!translations.containsKey(contre)) {
+            List<String> noExiste= new ArrayList<String>();
+            noExiste.add(against);
+            translations.put(contre, noExiste);
+        }else {
+            List<String> existe= translations.get(contre);
+            existe.add(against);
+            translations.put(against, existe);
         }
-        translations.put(contre, against);
     }
 
-    public String getTranslation(String contre) {
-
-        if (translations.containsKey(contre)) {
-            return translations.get(contre);
-        }
-        if (translations.containsValue(contre)) {
-            for (Map.Entry<String, String> entry : translations.entrySet()) {
-                if (contre.equals(entry.getValue())) {
-                    return entry.getKey();
-                }
-            }
-        }
-        return "Ce mot n'existe pas dans le dictionnaire";
-    }
-
-    public void addMultipleTranslation(String contre, List<String> liste) {
-        translationsMultiple.put(contre, liste);
-
-    }
-
-    public List getMultipleTranslation(String contre) {
-        return translationsMultiple.get(contre);
+    public List getTranslation(String contre) {
+        return this.translations.get(contre);
     }
 
 }
