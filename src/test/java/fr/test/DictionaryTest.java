@@ -44,14 +44,22 @@ public class DictionaryTest {
     }
 
     @Test
-    public void testOneTranslation1() {
+    public void testOneTranslation2() {
         liste.add("tomorrow");
         dict.addTranslation("demain", "tomorrow");
         assertThat(liste, containsInAnyOrder("tomorrow"));
     }
 
     @Test
-    public void testOneTranslation2() {
+    public void testMultipleTranslation() {
+        dict.addTranslation("contre", "against");
+        dict.addTranslation("contre", "versus");
+        List<String> laListe = dict.getTranslation("contre");
+        assertThat(laListe, containsInAnyOrder("against","versus"));
+    }
+
+    @Test
+    public void testinverseTranslation(){
         liste.add("against");
         liste.add("versus");
         assertThat(liste, containsInAnyOrder("against","versus"));
