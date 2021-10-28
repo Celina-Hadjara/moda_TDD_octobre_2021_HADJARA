@@ -21,6 +21,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'au.com.dius.pact.consumer:junit5:4.2.14'
+
 
     // Testing
     testImplementation 'junit:junit:4.13.2'

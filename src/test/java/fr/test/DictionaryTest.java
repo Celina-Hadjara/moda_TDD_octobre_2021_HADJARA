@@ -5,6 +5,8 @@ import fr.main.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +15,9 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 
+//@ExtendWith(MockitoExtension.class)
 public class DictionaryTest {
+    @Mock
     private Dictionary dict;
     private List<String> liste;
 
