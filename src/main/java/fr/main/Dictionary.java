@@ -18,4 +18,11 @@ public class Dictionary {
     public boolean isEmpty() {
         return true;
     }
+
+    public void addTranslation(String contre, String against) {
+    }
+
+    public String getTranslation(String contre) {
+        return null;
+    }
 }
