@@ -33,7 +33,7 @@ public class DictionaryTest {
 
     @Test
     public void estVide(){
-        assertThat(dict.isEmpty(), equalTo(true));
+        assertThat(dict.isEmpty(), equalTo(null));
     }
 
     @Test public void testOneTranslation() {
