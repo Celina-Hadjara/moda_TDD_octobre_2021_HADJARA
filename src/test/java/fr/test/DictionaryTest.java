@@ -11,7 +11,6 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsInAnyOrder;
 
 public class DictionaryTest {
     private Dictionary dict;
@@ -45,7 +44,7 @@ public class DictionaryTest {
     @Test
     public void testOneTranslation1() {
         dict.addTranslation("demain", "tomorrow");
-        assertThat(dict.getTranslation("demain"), equalTo("tomorrow"));
+        assertThat(dict.getMultipleTranslation("demain"), equalTo("tomorrow"));
     }
 
     @Test

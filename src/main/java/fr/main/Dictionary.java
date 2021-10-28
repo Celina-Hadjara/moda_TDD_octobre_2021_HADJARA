@@ -24,6 +24,9 @@ public class Dictionary {
     }
 
     public void addTranslation(String contre, String against) {
+        if (translations.containsKey(contre)){
+           System.err.println("Le mot existe déjà.");
+        }
         translations.put(contre, against);
     }
 
