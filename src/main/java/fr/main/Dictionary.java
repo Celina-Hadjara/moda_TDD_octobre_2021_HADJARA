@@ -3,6 +3,7 @@ package fr.main;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Dictionary implements IDictionary{
     private final String name;
@@ -34,6 +35,13 @@ public class Dictionary implements IDictionary{
     }
 
     public List getTranslation(String contre) {
+        List<String> returnList = null;
+        for(Map.Entry<String, List<String>> entry : translations.entrySet()){
+            if (contre.equals(entry.getValue())) {
+                returnList.add(entry.getKey());
+                return returnList;
+            }
+        }
         return this.translations.get(contre);
     }
 
