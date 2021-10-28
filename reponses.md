@@ -15,8 +15,8 @@ addTranslation ajoute les mots à traduire sa traduction. Et la méthode getTran
 On peut utiliser comme valeur de map une liste : `HashMap<String, List<String>>`
 
 
-Que pourrait-on proposer comme implémentation pour résoudre ce problème? 
-
+**Quel type de test réalise-t-on dans ce cas ?**
+Dans ce cas on fait des tests d'integration 
 
 **Discuter des avantages et des inconvénients de la technique du TDD par rapport à vos techniques de
 développement usuelles.**
