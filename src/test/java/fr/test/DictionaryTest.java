@@ -1,3 +1,5 @@
+package fr.test;
+
 import fr.main.*;
 
 import org.junit.After;
@@ -12,6 +14,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DictionaryTest {
     private Dictionary dict;
+
+    public DictionaryTest() {
+        this.dict = new Dictionary();
+    }
+
 
     @Before
     public void initialize () {
