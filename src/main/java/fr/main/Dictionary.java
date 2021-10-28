@@ -4,13 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Dictionary {
-    private String name;
-    private Map<String, String> translations;
+    private final String name;
+    private final Map<String, String> translations;
 
-    public Dictionary(String name) {
-        this.name = "Example";
-        this.translations = new HashMap<>();
-    }
 
     public Dictionary() {
         this.name = "Example";
