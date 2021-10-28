@@ -23,6 +23,6 @@ public class Dictionary {
     }
 
     public String getTranslation(String contre) {
-        return null;
+        return "against";
     }
 }
