@@ -12,6 +12,7 @@ public class Dictionary {
     public Dictionary(String example) {
         this.name = "Example";
         this.translations = new HashMap<>();
+        this.translationsMultiple = new HashMap<>();
     }
 
     public String getName() {
@@ -49,4 +50,5 @@ public class Dictionary {
     public List getMultipleTranslation(String contre) {
         return translationsMultiple.get(contre);
     }
+
 }

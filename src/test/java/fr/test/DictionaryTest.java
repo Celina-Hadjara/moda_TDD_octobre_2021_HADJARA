@@ -50,9 +50,10 @@ public class DictionaryTest {
 
     @Test
     public void testOneTranslation2() {
-        liste.add("deux");
-        liste.add("two");
-        assertThat(liste, containsInAnyOrder("deux", "two"));
+        liste.add("against");
+        liste.add("versus");
+        dict.addMultipleTranslation("contre", liste);
+        assertThat(dict.getMultipleTranslation("contre"), equalTo(liste));
     }
 
     @After
