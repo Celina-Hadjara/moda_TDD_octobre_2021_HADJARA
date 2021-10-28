@@ -43,13 +43,13 @@ public class DictionaryTest {
     }
 
     @Test
-    public void testOneTranslation2() {
+    public void testOneTranslation1() {
         dict.addTranslation("demain", "tomorrow");
         assertThat(dict.getTranslation("demain"), equalTo("tomorrow"));
     }
 
     @Test
-    public void testOneTranslation3() {
+    public void testOneTranslation2() {
         liste.add("deux");
         liste.add("two");
         assertThat(liste, containsInAnyOrder("deux", "two"));
