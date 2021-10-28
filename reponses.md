@@ -9,4 +9,6 @@ addTranslation ajoute les mots à traduire sa traduction. Et la méthode getTran
 à traduire
 
 Que proposez-vous pour pouvoir gérer les traductions multiples ?
-On peut utiliser des listes 
+On peut utiliser comme valeur de map une liste : HashMap<String, List<String>>
+
+Que pourrait-on proposer comme implémentation pour résoudre ce problème? 

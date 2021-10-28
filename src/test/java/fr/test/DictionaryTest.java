@@ -60,9 +60,12 @@ public class DictionaryTest {
 
     @Test
     public void testinverseTranslation(){
-        liste.add("against");
-        liste.add("versus");
-        assertThat(liste, containsInAnyOrder("against","versus"));
+        dict.addTranslation("contre", "against");
+        dict.addTranslation("contre", "versus");
+        dict.addTranslation("against", "contre");
+        dict.addTranslation("versus", "contre");
+        List<String> laListe = dict.getTranslation("contre");
+        assertThat(laListe, containsInAnyOrder("against","versus","contre"));
     }
 
     @After

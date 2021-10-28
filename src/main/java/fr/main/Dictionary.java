@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Dictionary {
+public class Dictionary implements IDictionary{
     private final String name;
     private HashMap<String, List<String>> translations;
 
