@@ -8,7 +8,7 @@ public class Dictionary {
     private final Map<String, String> translations;
 
 
-    public Dictionary() {
+    public Dictionary(String example) {
         this.name = "Example";
         this.translations = new HashMap<>();
     }
