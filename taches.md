@@ -1,1 +1,2 @@
-Dictionnaire vide "isEmpty()" n’est pas implémentée de manière correcte.
+- Tâche concernant "getName()".
+- Dictionnaire vide "isEmpty()" n’est pas implémentée de manière correcte.
