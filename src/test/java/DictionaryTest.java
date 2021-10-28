@@ -3,6 +3,7 @@ import fr.main.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 
 import java.util.ArrayList;
 
@@ -31,6 +32,11 @@ public class DictionaryTest {
     @Test public void testOneTranslation() {
         dict.addTranslation("contre", "against");
         assertThat(dict.getTranslation("contre"), equalTo("against"));
+    }
+
+    @Test public void testOneTranslation2() {
+        dict.addTranslation("demain", "tomorrow");
+        assertThat(dict.getTranslation("demain"), equalTo("tomorrow"));
     }
 
     @After
